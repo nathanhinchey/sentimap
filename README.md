@@ -1,2 +1,2 @@
 #SentiMap
-A map of sentiment about specific topics by location
+A map of sentiment about specific topics by location.
