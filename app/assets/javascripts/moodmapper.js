@@ -33,7 +33,7 @@
     "elementType": "geometry.fill",
     "stylers": [
       { "visibility": "on" },
-      { "lightness": -100 }
+      { "color": "#a5a5a" }
     ]
   },{
     "featureType": "landscape.man_made",
@@ -51,7 +51,7 @@
       { "visibility": "off" }
     ]
   },{
-    "featureType": "road",
+    "featureType": "road.highway",
     "stylers": [
       { "visibility": "off" }
     ]
@@ -71,7 +71,7 @@
     "elementType": "geometry",
     "stylers": [
       { "visibility": "on" },
-      { "color": "#ffffff" }
+      { "color": "#a5a5a5" }
     ]
   },{
     "featureType": "landscape",
@@ -79,9 +79,26 @@
     "stylers": [
       { "visibility": "off" }
     ]
+  },{
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "saturation": 12 },
+      { "gamma": 0.98 }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#d2d2d2" }
+    ]
   }
 ]
-
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -91,14 +108,12 @@
     // Note: We scale the area of the circle based on the tweetTotal.
     for (var city in citymap) {
       var populationOptions = {
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.7,
+        strokeWeight: 0,
+        fillColor: '#f27d0c',
+        fillOpacity: 1,
         map: map,
         center: citymap[city].center,
-        radius: Math.sqrt(citymap[city].tweetTotal)
+        radius: 100
       };
       // Add the circle for this city to the map.
       cityCircle = new google.maps.Circle(populationOptions);
