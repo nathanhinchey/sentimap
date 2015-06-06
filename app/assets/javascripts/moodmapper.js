@@ -26,6 +26,7 @@
       zoom: 12,
       center: citymap['newyork'].center,//new google.maps.LatLng(37.09024, -95.712891),
       mapTypeId: google.maps.MapTypeId.TERRAIN,
+      streetViewControl: false,
       styles: [
   {
     "featureType": "landscape.natural",
@@ -80,7 +81,7 @@
     ]
   }
 ]
-      
+
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'),
