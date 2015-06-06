@@ -25,7 +25,62 @@
     var mapOptions = {
       zoom: 12,
       center: citymap['newyork'].center,//new google.maps.LatLng(37.09024, -95.712891),
-      mapTypeId: google.maps.MapTypeId.TERRAIN
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      styles: [
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "lightness": -100 }
+    ]
+  },{
+    "featureType": "landscape.man_made",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "administrative",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  }
+]
+      
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'),
